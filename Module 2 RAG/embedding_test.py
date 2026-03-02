@@ -19,7 +19,6 @@ embeddings = model.encode(sentences, convert_to_tensor=True)
 
 # 4. 计算余弦相似度 (Cosine Similarity)
 # 我们拿第一句 (index 0) 分别和另外两句对比
-# Cosine Similarity 公式: (A · B) / (||A|| * ||B||)
 sim_cat_dog = F.cosine_similarity(embeddings[0].unsqueeze(0), embeddings[1].unsqueeze(0))
 sim_cat_weather = F.cosine_similarity(embeddings[0].unsqueeze(0), embeddings[2].unsqueeze(0))
 # unsqueeze(0) 是为了把向量从 [384] 变成 [1, 384]，以符合 cosine_similarity 的输入要求
