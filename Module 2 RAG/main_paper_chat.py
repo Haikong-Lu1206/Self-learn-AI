@@ -10,7 +10,6 @@ from main_chat import call_deepseek
 def main():
     load_dotenv()
     api_key = os.getenv("DEEPSEEK_API_KEY").strip()
-    print(api_key)
     # 1. 模拟或读取论文内容
     paper_text = """2030年交通蓝图：磁悬浮物流与低空飞行网。
 在2030年的城市规划中，核心架构是名为“阿耳忒弥斯”（Artemis）的地下磁悬浮货运管道系统。

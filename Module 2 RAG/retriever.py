@@ -24,6 +24,7 @@ class SimpleRecursiveSplitter:
             chunks.append(current_chunk)
 
         return chunks
+    
 class SimpleRetriever:
     def __init__(self, model_name='all-MiniLM-L6-v2'):
         # 1. 初始化 Embedding 模型
